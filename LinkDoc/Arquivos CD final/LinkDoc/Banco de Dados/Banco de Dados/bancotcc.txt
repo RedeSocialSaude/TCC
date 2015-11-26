@@ -1,0 +1,113 @@
+Pessoa
+
+INSERT INTO `mydb`.`pessoa` (`nome_pessoa`, `sobrenome_pessoa`, `cidade`, `estado`, `sexo`, `email`, `senha`, `data_nasc`, `cod_dif`, `num_pessoa`, `caminho_imagem`) VALUES ('Jade', 'Moreira', 'Divinópolis', 'MG', 'F', 'jaademoreira@hotmail.com', '123456', '1996-03-28', '1', '666', 'legal');
+INSERT INTO `mydb`.`pessoa` (`nome_pessoa`, `sobrenome_pessoa`, `cidade`, `estado`, `sexo`, `email`, `senha`, `data_nasc`, `cod_dif`, `num_pessoa`, `caminho_imagem`) VALUES ('Bianca', 'Rei', 'Divinópolis', 'MG', 'F', 'bianca@hotmai.com', '123456789', '1998-07-07', '0', '999', 'isso');
+INSERT INTO `mydb`.`pessoa` (`nome_pessoa`, `sobrenome_pessoa`, `cidade`, `estado`, `sexo`, `email`, `senha`, `data_nasc`, `cod_dif`, `num_pessoa`, `caminho_imagem`) VALUES ('Arthur', 'Goes', 'São Paulo', 'SP', 'M', 'arthurgomes33@gmail.com', '123444', '1997-07-07', '0', '99999', 'manaiero');
+
+
+Grupo
+
+INSERT INTO `mydb`.`grupo` (`id_grupo`, `nome_grupo`, `pessoa_id_pessoa`) VALUES ('1', 'Neurologia ', '1');
+INSERT INTO `mydb`.`grupo` (`id_grupo`, `nome_grupo`, `pessoa_id_pessoa`) VALUES ('2', 'Fisioterapia', '1');
+
+
+
+Grupo_has_pessoa
+
+INSERT INTO `mydb`.`pessoa_has_grupo` (`pessoa_id_pessoa`, `grupo_id_grupo`) VALUES ('02', '01');
+INSERT INTO `mydb`.`pessoa_has_grupo` (`pessoa_id_pessoa`, `grupo_id_grupo`) VALUES ('01', '01');
+INSERT INTO `mydb`.`pessoa_has_grupo` (`pessoa_id_pessoa`, `grupo_id_grupo`) VALUES ('03', '01');
+INSERT INTO `mydb`.`pessoa_has_grupo` (`pessoa_id_pessoa`, `grupo_id_grupo`) VALUES ('02', '02');
+INSERT INTO `mydb`.`pessoa_has_grupo` (`pessoa_id_pessoa`, `grupo_id_grupo`) VALUES ('01', '02');
+
+
+
+Area_Informativa
+
+INSERT INTO `mydb`.`area_informativa` (`id_area_informativa`, `titulo`, `conteudo`, `caminho_imagem_informativa`) VALUES ('1', 'Neuro', 'Legal', 'Jade');
+INSERT INTO `mydb`.`area_informativa` (`id_area_informativa`, `titulo`, `conteudo`, `caminho_imagem_informativa`) VALUES ('2', 'Fisioterapia', 'Maneiro', 'Arthur');
+
+
+
+Comentario
+
+INSERT INTO `mydb`.`comentario` (`comentario`, `grupo_id_grupo`, `pessoa_id_pessoa`) VALUES ('Legal', '01', '01');
+INSERT INTO `mydb`.`comentario` (`comentario`, `grupo_id_grupo`, `pessoa_id_pessoa`) VALUES ('Legal', '01', '02');
+INSERT INTO `mydb`.`comentario` (`comentario`, `grupo_id_grupo`, `pessoa_id_pessoa`) VALUES ('Maneiro', '02', '02');
+INSERT INTO `mydb`.`comentario` (`comentario`, `grupo_id_grupo`, `pessoa_id_pessoa`) VALUES ('Maneiro', '01', '03');
+
+
+
+Profissional_Saude
+
+INSERT INTO `mydb`.`profissional_saude` (`pessoa_id_pessoa`, `identificacao`, `curso`, `local_trabalho`, `area_informativa_id_area_informativa`) VALUES ('01', '1234123', 'Neuro', 'Divinópolis, São João De Deus', '1');
+
+
+Dados
+
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('1', '2015-11-07', '90', '1.5', '90', '128', '12.6', '1000', '15');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('2', '2015-11-08', '90', '1.5', '90', '128', '12.6', '1000', '15');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('3', '2015-11-09', '90', '1.5', '90', '128', '12.6', '1000', '15');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('4', '2015-11-10', '90', '1.5', '90', '128', '12.6', '1000', '15');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('5', '2015-11-11', '90', '1.5', '90', '128', '12.6', '1000', '15');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('6', '2015-11-12', '80', '1.55', '98', '128', '12.9', '500', '7');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('7', '2015-11-13', '80', '1.55', '98', '128', '12.9', '500', '7');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('8', '2015-11-14', '80', '1.55', '98', '128', '12.9', '500', '7');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('9', '2015-11-15', '80', '1.55', '98', '128', '12.9', '500', '7');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('10', '2015-01-15', '80', '1.55', '98', '128', '12.9', '500', '7');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('11', '2015-02-15', '75', '1.55', '100', '150', '15.6', '2000', '30');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('12', '2015-03-15', '75', '1.7', '100', '150', '15.6', '2000', '30');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('13', '2015-04-15', '75', '1.7', '100', '150', '15.6', '2000', '30');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('14', '2015-05-15', '75', '1.7', '100', '150', '15.6', '2000', '30');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('15', '2015-06-15', '75', '1.7', '100', '150', '15.6', '2000', '30');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('16', '2015-07-15', '77', '1.71', '120', '150', '17.8', '2000', '30');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('17', '2015-08-15', '77', '1.71', '120', '150', '17.8', '2000', '30');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('18', '2015-09-15', '77', '1.71', '120', '150', '17.8', '2000', '30');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('19', '2015-10-15', '77', '1.71', '120', '150', '17.8', '2000', '30');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('20', '2015-11-15', '77', '1.71', '120', '120', '17.8', '2000', '30');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('21', '2006-11-15', '65', '1.8', '120', '120', '17.8', '3000', '50');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('22', '2007-11-15', '65', '1.71', '120', '120', '10.2', '3000', '45');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('23', '2008-11-15', '65', '1.8', '87', '120', '10.2', '3000', '76');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('24', '2009-11-15', '65', '1.8', '87', '120', '10.2', '3000', '43');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('25', '2010-11-15', '65', '1.8', '87', '120', '10.2', '3000', '23');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('26', '2011-11-15', '65', '1.58', '87', '120', '13.2', '3000', '78');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('27', '2012-11-15', '59', '1.58', '87', '120', '13.2', '3000', '34');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('28', '2013-11-15', '59', '1.58', '87', '120', '13.2', '3000', '24');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('29', '2015-11-15', '59', '1.58', '87', '120', '13.2', '3000', '66');
+INSERT INTO `mydb`.`dados` (`id_dados`, `data_insercao`, `peso`, `altura`, `glicose`, `colesterol`, `pressao`, `metros_percorridos`, `temp_percorrido_min`) VALUES ('30', '2014-11-15', '59', '1.58', '88', '120', '13.2', '3000', '76');
+
+
+
+Dados_has_pessoa
+
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '01');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '02');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '03');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '04');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '05');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '06');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '07');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '08');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '09');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '10');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '11');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '12');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '13');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '14');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('02', '15');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '16');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '17');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '18');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '19');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '20');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '21');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '22');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '23');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '24');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '25');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '26');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '27');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '28');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '29');
+INSERT INTO `mydb`.`pessoa_has_dados` (`pessoa_id_pessoa`, `dados_id_dados`) VALUES ('03', '30');
+
